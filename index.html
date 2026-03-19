@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chand Raat Mubarak</title>
+  <style>
+    /* ===== App.css converted ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #fceabb, #f8b500);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ff4081;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff4081;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e73370;
+    }
+
+    .content {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .gif {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-size: 1em;
+      color: #333;
+      line-height: 1.5;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.5em; }
+      .message { font-size: 0.9em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌙 Chand Raat Mubarak 🌙</h1>
+
+    <button id="openButton">Open Your Gift 🎁</button>
+
+    <div class="content" id="giftContent" style="display:none;">
+      <img src="giphy.gif" alt="giphy" class="gif">
+      <p class="message">
+        💖 Chand Raat Mubarak, Jaan 🌙<br>
+        May this beautiful night bring you endless happiness ✨<br>
+        Eid Mubarak in advance 💖
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const openButton = document.getElementById('openButton');
+    const giftContent = document.getElementById('giftContent');
+
+    openButton.addEventListener('click', () => {
+      openButton.style.display = 'none';
+      giftContent.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
